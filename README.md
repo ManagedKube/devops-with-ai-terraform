@@ -1,6 +1,16 @@
 # devops-with-ai-terraform
 How to run a production cloud system with AI
 
+## The idea behind this
+Github and the community has been building and using AI for a little while.  With DevOps and building infrastructure
+with IaC, we have found that just chatting with an AI bot, it lacks context even if you give it the file you are
+currently working on.  It doesnt know the wider context of your DevOps repo and how it is setup and used.  Luckily,
+Github and the community has created an ecosystem to help with this context problem.  However, it is still very much
+in it's early stages and how things works is a moving target.  This repository will showcase what we have been doing
+and how we have been doing it.  From our experience with real world production system and using AI to build it, we
+are rolling our learnings back into this repo.  We have found that with the right pieces in place and the right
+content, AI can dramatically reduce our work and help us to build our cloud infrastructure.
+
 ## What Works Well with AI Agents
 
 - Creating a new Terraform module
