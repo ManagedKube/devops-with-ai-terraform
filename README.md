@@ -19,6 +19,15 @@ content, AI can dramatically reduce our work and help us to build our cloud infr
 - You will most likely test in staging and then once that has been figured out (hopefully with your AI assistant)
   you can open an issue for the AI to update prod with the same changes to the same versions, etc
 
+## Demo
+
+### Updating production with the same release version as staging
+???
+
+### Updating a Terraform module with ??something??
+??? Create a github issue to update a terraform module with something (make it interesting and kinda complex).  Then
+assign it to copilot.  Make sure the PR is good, if not, iterate on it.  Then post the issue and PR here.
+
 ## How to make Github Copilot better
 - https://github.blog/ai-and-ml/github-copilot/5-tips-for-writing-better-custom-instructions-for-copilot/
 - https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions
