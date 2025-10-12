@@ -27,10 +27,61 @@ Uses Github Actions for CI/CD
 ### Testing
 Uses Github Actions for testing
 
-## Project and code guidelines
+## Project and Code Guidelines
 
+### Code Quality
+- **Type Hints**: Always use type hints in languages that support them (especially Python)
+- **File Paths**: When suggesting code changes, always include the file path
+- **Testing**: Write tests for new components and validate changes before committing
+
+### Security Best Practices
+- **Encryption**: Use encryption by default when possible
+- **Key Management**: Provide options for users to pass in encryption keys (KMS, certificates, etc.) OR create them automatically
+- **Network Security**: Give options for public or private IP addresses where applicable
+- **Secrets**: Never commit secrets; use GitHub Actions secrets and variables
+
+### Resource Tagging
+- Add tags to all AWS resources indicating:
+  - What created the resource (e.g., `created_by: terraform`)
+  - The environment (e.g., `environment: staging`)
+
+## Configuration Management
+
+### Using GitHub Actions for Configuration
+All production configuration is managed through GitHub Actions to avoid local setup requirements.
+
+
+### Standard Deployment Process
+1. **Preview**: Review changes using `terraform plan` (automatic on PRs)
+2. **Apply**: Deploy changes with `terraform apply` (automatic on merge to main)
+3. **Monitor**: logs
+
+### GitHub Actions Automation
+- **Pull Requests**: Automatically runs `terraform plan` and posts results as PR comment
+- **Merge to Main**: Automatically runs `terraform apply` to apply infrastructure changes
+
+## Testing and Validation
+
+### Before Making Changes
+1. Understand the existing component structure
+2. Review related components and their dependencies
+3. Check for existing tests or validation patterns
+
+### After Making Changes
+1. **Lint**: Run linters if available for the changed files
+2. **Validate**: Use `terraform plan` to see planned changes
+3. **Test**: Verify in staging environment before production
+4. **Document**: Update README or component documentation if needed
+
+### Component Testing
+- Test components in staging environment first
+- Use pre-releases for testing new component versions
+- Validate that existing stacks are not inadvertently affected
 
 ## Project structure
+
+
+
 
 ## Resources
 
